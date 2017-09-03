@@ -1,0 +1,14 @@
+#! /usr/bin/env node
+
+const chalk = require("chalk");
+const { sync: pkgDir } = require("pkg-dir");
+
+try {
+  process.chdir(pkgDir());
+} catch (error) {
+  process.stderr.write(chalk.bold.red("Error: "));
+  process.stderr.write(chalk.red("can't find any package root\n"));
+  process.exit(1);
+}
+
+require("../lib");
