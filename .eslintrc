@@ -1,9 +1,9 @@
 {
   "extends": ["eslint-config-airbnb-base", "prettier"],
 
-  plugins: ["prettier"],
+  "plugins": ["prettier"],
 
-  rules: {
+  "rules": {
     "prettier/prettier": "error",
 
     "import/no-extraneous-dependencies": [
